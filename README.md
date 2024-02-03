@@ -1,25 +1,13 @@
-## Railway Station Ticket Barrier Classification Model
+## Panda fox Classification Model
 
 
-![Project Banner](https://github.com/GorPiliposyan/subway-ticket-barrier-state-detection/blob/main/banner_img.gif)
-
-*Credits: Banner gif generated with DALL-E (text to image) and Runway (image to video).*
-
-
-### Table of Contents
-
-- [Task Description](Task-Description)
-- [Tech Stack](#Tech-Stack)
-- [Approach Overview](Approach-Overview)
-- [Deliverables](Deliverables)
-- [Web App](Web-App)
+![Project Banner](https://github.com/Qristt/panda-fox-classification.git)
 
 #
 
 ### Task Description
 
-The task aimed to create an open/closed classification model for ticket barriers ("gates") at railway stations. Some part of the images in the dataset used to build this model were provided privately, while the rest were acquired through web-scraping. The model's objective was to accurately determine whether a gate in an image is open or closed. It was crucial for the model to generalize well for unseen gate types, considering the provided data was only a subset of potential gate types.
-
+The goal of the task was to create a model that would predict what animal was given a picture. The images used to create this model were obtained from websites. The goal of the model was to accurately determine the name of the animal. It was very important for the model to perform the prediction well, considering that the data provided is a small part of the whole.
 
 ---
 
@@ -44,10 +32,7 @@ The task aimed to create an open/closed classification model for ticket barriers
 ### Approach Overview
 
 - **Model Preparation Jupyter Notebook:** The process of creating the classification model was detailed in the `model_preparation.ipynb` notebook. This notebook includes comprehensive steps for data preparation, model training, and evaluation. Comments throughout the notebook elaborate on key decisions and metrics supporting the model's adequacy.
-
-- **Model Deployment Preparation:**
-  - Created a `Model()` class in `model.py`: This class wraps the trained model using a `load_model()` method for loading the model and includes a `predict()` method to run inference on a list of image tensors, the output of which is a list of "open" or "closed" labels in binary format (0/1).
-  - `model_run.py`: A Python script demonstrating the usage of the `Model()` class for inference on a set of images.
+- And model_structure.ipynb` is the model.
 
 
 #
@@ -63,11 +48,10 @@ The task aimed to create an open/closed classification model for ticket barriers
 
 **Main files:**
 - `model_preparation.ipynb`: Detailed Jupyter Notebook showcasing in detail the model creation process with relevant comments and a discussion section in the end.
-- `model.py`: Python code file containing the `Model()` class, prepared for software engineering teams to facilitate model usage. Necessary for running `model_run.py`.
-- `model_run.py`: For demonstration of the usage of the `Model()` class in `model.py` file.
+- `model_structure.ipynb`: Python code file, our model`.
 - `yolov8x_cls_custom.pt`: Ultralytics YOLOv8 custom trained 'yolov8x-cls.pt' model weights file. Necessary to run `model_run.py` file.
 
 **Extra files:**
 - `utils`: Folder with some helper functions I have used for "model_preparation.ipynb"
-- `data`: Dataset folder with the original and augmented images, split into train/val/test folders. (test images only in original folder)
-- `results.csv`: File with training related info per epoch. (*Used in `model_preparation.ipynb`*)
+- `simple_images`: Dataset folder with the original and augmented images, split into train/val/test folders. (test images only in original folder)
+- `runs`: Folder with training images.
